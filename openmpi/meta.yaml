@@ -1,0 +1,31 @@
+package:
+  name: openmpi
+  version: 4.0.1
+
+about:
+  home: http://www.open-mpi.org/
+  summary: 'Open MPI: A high performance message passing library'
+  license: 'BSD (https://www.open-mpi.org/community/license.php)'
+
+requirements:
+  build:
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+  conflicts:
+    - mpich
+    - mpich2
+
+source:
+  fn: openmpi-4.0.1.tar.bz2
+  url: https://download.open-mpi.org/release/open-mpi/v4.0/openmpi-4.0.1.tar.bz2
+  md5: eff784f796b2aa77facaf8056a1ad511
+
+build:
+  number: 0
+  features:
+    - openmpi
+  track_features:
+    - openmpi
+  skip: true # [win]
+  binary_relocation: true
+  detect_binary_files_with_prefix: true

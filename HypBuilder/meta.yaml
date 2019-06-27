@@ -1,0 +1,22 @@
+package:
+  name: hypbuilder
+  version: "0.1.0"
+
+source:
+  path: ./
+
+requirements:
+  build:
+    - python
+
+  run:
+    - python
+
+build:
+  noarch: python
+  script: python setup.py install
+
+
+about:
+  home: https://github.com/LoLab-VU/HypBuilder
+  summary: "HypBuilder is software for the large scale construction of physicochemical models in the format of PySB."

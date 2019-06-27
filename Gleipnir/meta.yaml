@@ -1,0 +1,32 @@
+package:
+  name: gleipnir
+  version: "0.18.0"
+
+source:
+  git_url: https://github.com/LoLab-VU/Gleipnir.git
+  git_rev: v0.18.0
+
+requirements:
+  build:
+    - python
+
+  run:
+    - python 3.6
+    - numpy
+    - scipy
+    - pandas
+
+build:
+  noarch: python
+  script: python setup.py install
+  include_recipe: False
+
+test:
+  imports:
+    - gleipnir
+
+about:
+  home: https://github.com/LoLab-VU/Gleipnir
+  license: MIT
+  license_file: LICENSE
+  summary: "Gleipnir is a python toolkit that provides an easy to use interface for Nested Sampling. "

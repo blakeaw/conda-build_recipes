@@ -1,0 +1,31 @@
+package:
+  name: dnest4
+  version: "0.2.3"
+
+source:
+  path: ./
+
+requirements:
+  build:
+    - python
+    - {{ compiler('cxx') }}
+    - cython
+    - numpy
+    - setuptools
+
+  run:
+    - python
+    - numpy
+    - scipy
+    - matplotlib
+    - numba
+    - cython
+
+test:
+  imports:
+    - dnest4
+
+about:
+  home: https://github.com/eggplantbren/DNest4
+  license: MIT
+  summary: "Diffusive nested sampling in Python"
